@@ -1,0 +1,101 @@
+/* Color Palette */
+:root {
+  --primary-color: #27364A; /* Navy blue for primary elements */
+  --secondary-color: #B0BEC5; /* Light grey for secondary elements */
+  --accent-color: #FFAB40; /* Orange for accents and calls-to-action */
+  --background-color: white; /* Off-white background */
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+.split-section {
+    display: flex;
+}
+
+.left-section,
+.right-section {
+    flex: 1; /* Both sections take up equal amount of space */
+    /* Or you can give a specific flex-basis if you want one section to be wider than the other */
+}
+
+/* Additional styles for your content */
+.left-section {
+    padding: 0 0;
+    /* Styles for left section */
+}
+
+.right-section {
+    padding: 120px 0;
+    /* Styles for right section */
+}
+
+/* Ensuring the image in the left section doesn't exceed its boundaries */
+.left-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+  
+}
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 30px 20px;
+}
+
+.control-btn {
+  padding: 30px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.direction-buttons button {
+  /* Additional selector to target buttons within .direction-buttons specifically */
+  margin: 15px 10px; /* Top and bottom margins of 15px, left and right margins of 10px */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-group > button,
+.direction-buttons {
+  margin-bottom: 15px; /* Add more space between rows of buttons */
+}
+
+.control-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.map-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+.pose-info {
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Delivery Robot Control Interface</title>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this path is correct -->
+    <script src="libraries/eventemitter2.js"></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/EaselJS/1.0.2/easeljs.min.js"></script>
+    <script src="libraries/roslib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"></script>
+    <script src="libraries/ros2d.js"></script>
+    <script src="libraries/Nav2D.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medicine Delivery Robot Control and Map Viewer</h1>
+        </header>
+        <div class="split-section">
+            <div class="left-section">
+        <!-- Content for the left section goes here -->
+            <img src="2.png" alt="Cat">
+            </div>
+            <div class="right-section">
+            <h2>Robot Control Pannel</h2>
+                <div class="button-group">
+                    <button id="forward" class="control-btn">Forward</button>
+                    <div class="direction-buttons">
+                        <button id="left" class="control-btn">Left</button>
+                        <button id="stop" class="control-btn">Stop</button>
+                        <button id="right" class="control-btn">Right</button>
+                    </div>
+                    <button id="backward" class="control-btn">Backward</button>
+                </div>
+            </div>
+        </div>
+
+        
+        <section class="map-section">
+            <h2>Map and Position View</h2>
+            <div id="map" class="map-container"></div>
+            <div id="poseInfo" class="pose-info">
+                <h3>Robot Pose</h3>
+                <p id="position">Position: X: 0, Y: 0</p>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+

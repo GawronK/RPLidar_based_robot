@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wybór Pacjenta RFID</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        select, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        header {
+            background: #27364A;
+            color: white;
+            padding: 30px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medicine Delivery Robot Control and Map Viewer</h1>
+    </header>
+    <section id="rfid-patient-selection">
+    <h2>Choose patient:</h2>
+        <label for="patientSelect">Patient:</label>
+        <select id="patientSelect">
+            {% for pacjent in pacjenci %}
+            <option value="{{ pacjent[5] }}">{{ pacjent[1] }} {{ pacjent[2] }} </option>
+            {% endfor %}
+        </select>
+        <button id="selectPatientButton">Choose</button>
+    </section>
+
+    <script>
+        document.getElementById('selectPatientButton').addEventListener('click', function() {
+            var numer_rfid = document.getElementById('patientSelect').value;
+            console.log("Wysyłanie UID:", numer_rfid);
+            fetch('/set_selected_patient', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'uid=' + numer_rfid
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                alert("Pacjent został wybrany. Kliknij 'ok' aby przejść do panelu sterowania.");
+                
+                setTimeout(function() {
+                window.location.href = 'xxxxx';
+                }, 1);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Wystąpił błąd podczas wybierania pacjenta.");
+            });
+            
+        });
+    </script>
+
+</body>
+</html>
