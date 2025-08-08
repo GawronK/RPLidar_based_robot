@@ -15,7 +15,7 @@ Projekt inżynierski przedstawia zaprojektowanie i wykonanie mobilnej platformy 
 Przebieg projektu:
 
 <p align="center">
-  <img src="image (12).png" alt="Widok robota" width="400">
+  <img src="image (12).png" alt="Widok robota" width="1000">
 </p>
 
 ## Funkcjonalności
