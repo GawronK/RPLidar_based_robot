@@ -12,6 +12,12 @@ Projekt inżynierski przedstawia zaprojektowanie i wykonanie mobilnej platformy 
   <img src="1754584107579.jpeg" alt="Widok robota" width="400">
 </p>
 
+Przebieg projektu:
+
+<p align="center">
+  <img src="image (12).png" alt="Widok robota" width="400">
+</p>
+
 ## Funkcjonalności
 
 - Autonomiczna nawigacja z wykorzystaniem systemu ROS oraz algorytmu Hector SLAM
