@@ -78,3 +78,21 @@ Przebieg projektu:
 3. Skonfiguruj i uruchom pakiety `rplidar_ros` i `hector_slam`
 4. Otwórz `index.html` w przeglądarce i połącz się z robotem przez WebSocket
 5. Testuj i monitoruj działanie z poziomu interfejsu
+
+
+<video width="400" controls>
+  <source src="film1.mp4" type="video/mp4">
+  Twoja przeglądarka nie obsługuje tagu video.
+</video>
+
+<video width="400" controls>
+  <source src="film2.mp4" type="video/mp4">
+  Twoja przeglądarka nie obsługuje tagu video.
+</video>
+
+
+<video width="400" controls>
+  <source src="film3.mp4" type="video/mp4">
+  Twoja przeglądarka nie obsługuje tagu video.
+</video>
+
